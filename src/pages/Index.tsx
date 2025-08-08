@@ -1,13 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { Hero } from '@/components/Hero';
+import { FeatureSection } from '@/components/FeatureSection';
+import { MapSection } from '@/components/MapSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      />
+      <main className="max-w-[1662px] w-full h-[1525px] relative bg-[#F9F5EE] mx-auto my-0 max-md:max-w-[991px] max-md:h-auto max-md:p-5 max-sm:max-w-screen-sm max-sm:p-4">
+        <Hero />
+        
+        <div className="flex w-full absolute left-0 top-[461px] max-md:flex-col max-md:relative max-md:top-auto">
+          <FeatureSection />
+          <MapSection />
+        </div>
+      </main>
+    </>
   );
 };
 
